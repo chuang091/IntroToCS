@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+h1 {color: black; font-style: italic;} 
+
+span {
+  font-size: 40px;
+}
+
+.extra span {
+  font-size: inherit;
+}
+h1, em { text-decoration: underline; }
+li em2 { font-weight: bold; }
+
+bold {font-weight: bold;}
+red {color: red;}
+
+
+</style>
+</head>
+
+<body>
+
+<h1 align="center"> Hi this is my second web pages!!<br>I will introduce inherit and conflict</h1>
+
+<h2 align="center"> First is inherit </h2>
+
+<p>
+  Here is <span>a span element</span> which is big font-size, as span elements are set to be.
+</p>
+
+<p class="extra" style="font-size:20px">
+  Here is <span>a span element</span> which font-size is 20px, because it inherits from its parent, extra class (font-size is 20px).
+</p>
+
+<p style="font-size: 5px">
+  Here is <span>a span element</span> wwhich is big font-size, as span elements are set to be, didn't affected by tag style.
+</p>
+
+<h2 align="center"> Second is confict </h2>
+
+<p style="font-weight: bold;">
+li em2 { font-weight: bold; } <br>
+h1, em { text-decoration: underline; }<br>
+What are the differences b/t these two? 
+</p>	
+
+<p>
+	We know that the HTML is nested structure(巢狀結構 我google 翻譯的) <br> see the first example <br>
+	in order to call bold style, we have to use "li" tag cover "em2" tag, and the "em2" tag (bold style) will be valid.
+</p>
+
+<li> this is li part and <em2> this is em part and the bold works!! </em2>  </li>
+
+<p>
+	OK, so what is difference between these two, in the second example, I will show you that the comma in HTML means <bold> separate </bold>, <br> which means we assign the style value repectively.<br> In other words both "h1" tag and "em" tag will be assign or append the same style value
+</p>
+
+<em>
+	hi (em tag)
+</em>
+
+<h1>
+	hi (h1 tag: big,italic and <red>underlined</red> )
+</h1>
+
+<p><a href = "index.html">Click me to access to the class and id</p>
+
+</body>
+</html>
