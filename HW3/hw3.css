@@ -1,0 +1,41 @@
+p {
+  font-family: serif, sans-serif, cursive, fantasy, monospace;
+}
+
+.hightlight {
+  font-weight: bold;
+  font-size: big;
+}
+
+@media print {
+
+  /* 此處指定的樣式僅適用於屏幕顯示 */
+  body {
+    background-color: lightblue;
+  }
+}
+
+@media screen {
+
+  /* 此處指定的樣式僅適用於打印輸出 */
+  body {
+    background-color: white;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+
+  /* Add styles for desktop devices here */
+  body {
+    background-color: lightgreen;
+  }
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 500px) {
+
+  /* Add styles for mobile devices here */
+  body {
+    background-color: lightsalmon;
+  }
+}
