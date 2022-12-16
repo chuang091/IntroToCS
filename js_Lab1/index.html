@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Js lab1</title>
+</head>
+
+<body>
+	<script>
+
+		let firstVariable = window.prompt("Please enter first variable:");
+		let secondVariable = window.prompt("Please enter second variable:");
+		let sum = parseInt(firstVariable) + parseInt(secondVariable);
+		if (firstVariable > secondVariable) {
+			document.body.style.backgroundColor = "lightblue";
+			document.writeln("<h1 align=center>" + firstVariable + ">" + secondVariable + "</h1>");
+		} else if (secondVariable > firstVariable) {
+			document.body.style.backgroundColor = "lightgreen";
+			document.writeln("<h1 align=center>" + firstVariable + "<" + secondVariable + "</h1>");
+		} else {
+			document.body.style.backgroundColor = "lightyellow";
+			document.writeln("<h1 align=center>" + firstVariable + "==" + secondVariable + "</h1>");
+		}
+
+
+		let button = document.createElement("button");
+		button.innerHTML = "Click me to see the fisrt variable";
+		document.body.appendChild(button);
+		button.addEventListener("click", function () {
+			alert("First Variable is " + firstVariable);
+		});
+		button.style.width = "150px";
+		button.style.height = "50px";
+
+
+		let button2 = document.createElement("button");
+		button2.innerHTML = "Click me to see the second variable";
+		document.body.appendChild(button2);
+		button2.addEventListener("click", function () {
+			alert("Seccond Variable is " + secondVariable);
+		});
+		button2.style.width = "150px";
+		button2.style.height = "50px";
+
+	</script>
+
+</body>
+
+</html>
