@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Js Bouns</title>
+</head>
+
+<body>
+
+  <form>
+    <label for="sentence">Enter a sentence:</label><br>
+    <input type="text" id="sentence" name="sentence"><br>
+    <label for="char">Enter a character:</label><br>
+    <input type="text" id="char" name="char"><br><br>
+    <button type="button" onclick="findOccurrences()">Find Occurrences</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    function findOccurrences() {
+      // Get the sentence and character from the form
+      var sentence = document.getElementById("sentence").value;
+      var char = document.getElementById("char").value;
+
+      // Find the first occurrence of the character
+      var firstIndex = sentence.indexOf(char);
+      console.log("First occurrence: " + firstIndex);
+
+      // Find the last occurrence of the character
+      var lastIndex = sentence.lastIndexOf(char);
+      console.log("Last occurrence: " + lastIndex);
+
+      // Find the third occurrence of the character
+      var thirdIndex = sentence.indexOf(char, 3);
+      console.log("Third occurrence: " + thirdIndex);
+
+      // Display the result
+      document.getElementById("result").innerHTML = "First occurrence: " + firstIndex + "<br>"
+        + "Last occurrence: " + lastIndex + "<br>"
+        + "Third occurrence: " + thirdIndex;
+    }
+  </script>
+
+</body>
+
+</html>
